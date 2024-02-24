@@ -3,7 +3,7 @@
     <img src="assets/imgs/logo.png" alt="">
     <h3>{{title}}</h3>
   </div>
-
+  @if(!finished){
   <div class="quizz-questions">
     <h3>{{questionSelected.question}}</h3>
   </div>
@@ -17,10 +17,11 @@
       {{option.name}}
     </button>
   </div>
+}
   @if(finished){
     <div class="quizz-results">
       <h1>O seu resultado é:</h1>
-      <p>Respota Selecionada</p>
+      <p>{{answerSelected}}</p>
     </div>
   }
 </div>
